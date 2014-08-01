@@ -34,13 +34,11 @@ import com.vdenotaris.spring.boot.security.saml.web.stereotypes.CurrentUser;
 public class CurrentUserHandlerMethodArgumentResolver implements
 		HandlerMethodArgumentResolver {
 
-	@Override
 	public boolean supportsParameter(MethodParameter methodParameter) {
 		return methodParameter.getParameterAnnotation(CurrentUser.class) != null
 				&& methodParameter.getParameterType().equals(User.class);
 	}
 
-	@Override
 	public Object resolveArgument(MethodParameter methodParameter,
 			ModelAndViewContainer mavContainer, NativeWebRequest webRequest,
 			WebDataBinderFactory binderFactory) throws Exception {

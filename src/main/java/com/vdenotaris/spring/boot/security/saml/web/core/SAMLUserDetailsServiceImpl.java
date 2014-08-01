@@ -35,7 +35,6 @@ public class SAMLUserDetailsServiceImpl implements SAMLUserDetailsService {
 	// Logger
 	private static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);
 	
-	@Override
 	public Object loadUserBySAML(SAMLCredential credential)
 			throws UsernameNotFoundException {
 		
