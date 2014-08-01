@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+group = 'com.vdenotaris.spring'
+version = '1.0.0.FINAL'
+
+description = """Spring Boot and Spring Security SAML integration sample"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+
+
+repositories {
+        
+     maven { url "http://repo.spring.io/milestone" }
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.1.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version:'1.1.4.RELEASE'
+    compile group: 'org.springframework.security.extensions', name: 'spring-security-saml2-core', version:'1.0.0.RC2'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'1.1.4.RELEASE'
+    compile group: 'xml-apis', name: 'xml-apis', version:'1.4.01'
+}
